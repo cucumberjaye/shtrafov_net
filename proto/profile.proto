@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package searcher;
+
+option go_package = ".;pb";
+
+message ProfileRequest {
+    string inn = 1;
+}
+
+message ProfileResponse {
+    string inn = 1;
+    string kpp = 2;
+    string company_name = 3;
+    string supervisor = 4;
+}
+
+service Searcher {
+    rpc GetProfile(ProfileRequest) returns (ProfileResponse);
+}

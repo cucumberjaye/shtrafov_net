@@ -1,0 +1,5 @@
+http:
+  rules:
+  - selector: searcher.Searcher.GetProfile
+    post: /search
+    body: "*"
